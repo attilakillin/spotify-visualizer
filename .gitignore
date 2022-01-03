@@ -5,5 +5,5 @@
 
 *.Rproj
 
-resources/
+data/
 output/
