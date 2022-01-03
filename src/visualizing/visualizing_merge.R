@@ -8,7 +8,7 @@ plot_hourly <- function(data, year, color) {
     plot +
       xlab("Hour of day") +
       ylab("Minutes listened (per day)") +
-      scale_fill_gradient(low = color, high = paste(color, "4")) +
+      scale_fill_gradient(low = paste(color, "1"), high = paste(color, "4")) +
       theme(
         text = element_text(family = .font),
         panel.background = element_rect(fill = "transparent"),
@@ -41,7 +41,7 @@ plot_daily <- function(data, year, color) {
     plot +
       xlab(NULL) + ylab(NULL) +
       scale_fill_gradientn(
-        colours = c("gray90", color, paste(color, "4")),
+        colours = c("gray90", paste(color, "1"), paste(color, "4")),
         values = c(0, 0.01, 1)
       ) +
       theme(

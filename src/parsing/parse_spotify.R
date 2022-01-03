@@ -8,7 +8,7 @@ parse_spotify <- function(filename) {
   title     <- extract("trackName")
   artist    <- extract("artistName")
   ms_played <- extract("msPlayed")
-  end_time  <- as.POSIXct(extract("endTime"), format = "%Y-%m-%d %H:%M")
+  end_time  <- as.POSIXct(extract("endTime"), format = "%F %R")
   
   data.frame(title, artist, ms_played, end_time)
 }
